@@ -1,0 +1,316 @@
+/* Import professional fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --orange: #a8680f;
+    --pink: #f2acbb;
+    --black: #1d1c1c;
+    --white: #fff;
+    --light-color: #666;
+    --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Apply new fonts throughout */
+* {
+    font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 400; 
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 100%; 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Global section styling */
+section {
+    padding: 40px 7%;
+}
+
+.heading {
+    font-size: 48px; 
+    color: var(--black);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500; 
+    margin-bottom: 40px; 
+}
+
+.heading span {
+    color: var(--orange);
+}
+
+/* Button styling */
+.btn {
+    font-size: 20px;
+    margin-top: 16px;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 6px;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: var(--orange);
+    color: var(--white);
+}
+
+/* Header styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 9%;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.header .logo i {
+    color: var(--orange);
+}
+
+.header .navbar {
+    display: flex; 
+    align-items: center; 
+}
+
+.header .navbar a {
+    font-size: 15px;
+    margin: 0 25px;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.header .navbar a:hover {
+    color: var(--orange);
+}
+
+.header .icons div {
+    font-size: 28px;
+    margin-left: 20px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* Home section */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 7%;
+}
+
+.home-container {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: row; /* Align children in a row */
+    align-items: center; /* Center items vertically */
+}
+
+.home .content {
+    flex: 1; /* Allow content to take available space */
+    padding-right: 20px; /* Add some space between text and image */
+}
+
+.home .image img {
+    width: 100%; /* Make the image responsive */
+    max-width: 400px; /* Set a maximum width for the image */
+    border: 5px solid #4a0a21;
+    border-radius: 5px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Optional: Add hover effect for the image */
+.home .image img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.box-container {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.box {
+    flex: 1; 
+    min-width: 220px; 
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    text-align: center; 
+    transition: transform 0.2s; 
+}
+
+.box img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.box:hover {
+    transform: scale(1.05); 
+}
+
+/* Weekly Schedule Section Styles */
+.schedule {
+    background-color: #f9f9f9; 
+    padding: 40px; 
+    border-radius: 8px; 
+    box-shadow: var(--box-shadow); 
+}
+
+.schedule h1 {
+    color: var(--orange); 
+    margin-bottom: 20px; 
+}
+
+.table-container {
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+th, td {
+    padding: 12px; 
+    text-align: center; 
+    border: 2px solid transparent; 
+}
+
+th {
+    background-color: var(--orange); 
+    color: var(--white); 
+    font-weight: 500; 
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2acbb; 
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffebc0; 
+}
+
+tbody tr:hover {
+    background-color: #f8c8d0; 
+    transition: background-color 0.3s; 
+}
+
+/* Announcements Section Styles */
+.announcements {
+    background-color: #ffebc0; 
+    padding: 40px; 
+    text-align: center; 
+    border-radius: 8px; 
+    box-shadow: var(--box-shadow);
+    margin: 20px 0; 
+}
+
+.announcements h1 {
+    color: var(--orange);
+    margin-bottom: 20px; 
+}
+
+.announcements p {
+    color: var(--black); 
+    margin: 10px 0; 
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--black);
+    color: var(--white); 
+    text-align: center; 
+    padding: 20px; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+.footer .credit {
+    font-size: 14px; 
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 991px) {
+    html {
+        font-size: 88%; 
+    }
+    .header {
+        padding: 24px 48px;
+    }
+    section {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 480px;
+        box-shadow: var(--box-shadow);
+        border-radius: 8px;
+        background: var(--white);
+    }
+    .header .navbar.active {
+        right: 24px;
+        transition: 0.4s linear;
+    }
+    .header .navbar a {
+        font-size: 24px;
+        margin: 24px;
+        display: block;
+    }
+    .home .content h3 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 80%; 
+    }
+    .home .content h3 {
+        font-size: 32px;
+    }
+}
